@@ -19,7 +19,7 @@ phases:
       - echo $REPOSITORY_URI
       - echo $IMAGE_TAG
       # - aws s3 cp s3://linkme-notification-service-us-east-1-codepipeline/.env .
-      #- aws s3 cp s3://codepipeline-ap-south-1-553528238017/.user-ms.env ./.env
+      - aws s3 cp s3://codepipeline-ap-south-1-553528238017
       - docker build --rm -f Dockerfile -t nikhil-backend:latest.
       - docker tag nikhil-backend:latest $REPOSITORY_URI:latest
       - echo Pushing the Docker images...
